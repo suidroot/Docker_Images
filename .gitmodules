@@ -1,0 +1,3 @@
+[submodule "docker-usbhub"]
+	path = docker-usbhub
+	url = https://github.com/suidroot/docker-usbhub.git
