@@ -1,3 +1,9 @@
 [submodule "docker-usbhub"]
 	path = docker-usbhub
 	url = https://github.com/suidroot/docker-usbhub.git
+[submodule "docker-greatfet"]
+	path = docker-greatfet
+	url = https://github.com/suidroot/docker-greatfet.git
+[submodule "docker-msp430"]
+	path = docker-msp430
+	url = https://github.com/suidroot/docker-msp430.git
