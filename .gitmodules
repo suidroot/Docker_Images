@@ -7,3 +7,9 @@
 [submodule "docker-msp430"]
 	path = docker-msp430
 	url = https://github.com/suidroot/docker-msp430.git
+[submodule "chipwhisperer5-docker"]
+	path = chipwhisperer5-docker
+	url = https://github.com/suidroot/chipwhisperer5-docker.git
+[submodule "docker-manalyze"]
+	path = docker-manalyze
+	url = https://github.com/suidroot/docker-manalyze.git

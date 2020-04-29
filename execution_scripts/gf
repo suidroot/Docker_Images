@@ -1,0 +1,5 @@
+#!/bin/bash
+
+USBMAPPING="/dev/bus/usb"
+
+docker run -it --privileged --rm -v $USBMAPPING:$USBMAPPING suidroot/greatfet gf $*
