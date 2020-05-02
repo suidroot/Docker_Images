@@ -13,3 +13,9 @@
 [submodule "docker-manalyze"]
 	path = docker-manalyze
 	url = https://github.com/suidroot/docker-manalyze.git
+[submodule "docker-icestorm"]
+	path = docker-icestorm
+	url = https://github.com/suidroot/docker-icestorm.git
+[submodule "docker-sigrok"]
+	path = docker-sigrok
+	url = https://github.com/suidroot/docker-sigrok.git
