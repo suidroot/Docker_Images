@@ -1,5 +1,12 @@
 #!/bin/bash
 
 USBMAPPING="/dev/bus/usb"
+IMAGE_NAME="suidroot/greatfet"
+IMAGE_SOURCE="https://github.com/suidroot/docker-greatfet.git"
+
+if [[ "$(docker images -q $IMAGE_NAME 2> /dev/null)" == "" ]]; then
+	docker build -t $IMAGE_NAME $IMAGE_SOURCE
+fi
+
 
 docker run -it --privileged --rm -v $USBMAPPING:$USBMAPPING suidroot/greatfet gf $*

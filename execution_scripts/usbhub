@@ -1,3 +1,11 @@
 #!/bin/bash
 
-docker run -it --privileged --rm -v --device=/dev/ttyACM0 usbhub usbhub $*
+IMAGE_NAME="suidroot/usbhub"
+IMAGE_SOURCE="https://github.com/suidroot/docker-usbhub.git"
+
+if [[ "$(docker images -q $IMAGE_NAME 2> /dev/null)" == "" ]]; then
+	docker build -t $IMAGE_NAME $IMAGE_SOURCE
+fi
+
+
+docker run -it --privileged --rm -v --device=/dev/ttyACM0 $IMAGE_NAME usbhub $*

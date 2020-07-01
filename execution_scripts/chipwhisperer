@@ -1,5 +1,13 @@
 #!/bin/bash
 
+IMAGE_NAME="suidroot/chipwhisperer5"
+IMAGE_SOURCE="https://github.com/suidroot/chipwhisperer5-docker.git"
+
+if [[ "$(docker images -q $IMAGE_NAME 2> /dev/null)" == "" ]]; then
+	docker build -t $IMAGE_NAME $IMAGE_SOURCE
+fi
+
+
 if [ -z "$1" ]
 then
       echo "Please supply a token for authentication!"
