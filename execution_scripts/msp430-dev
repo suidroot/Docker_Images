@@ -1,0 +1,18 @@
+#!/bin/sh
+
+IMAGE_NAME="suidroot/msp430"
+IMAGE_SOURCE="https://github.com/suidroot/docker-msp430.git"
+
+if [[ "$(docker images -q $IMAGE_NAME 2> /dev/null)" == "" ]]; then
+	docker build -t $IMAGE_NAME $IMAGE_SOURCE
+fi
+
+
+docker run --name arm-dev -it --rm \
+	-v /dev/bus/usb:/dev/bus/usb \
+    	--privileged \
+	-v $PWD:/data \
+	-v $HOME:/root \
+	-w /data \
+	$IMAGE_NAME \
+	/bin/bash
